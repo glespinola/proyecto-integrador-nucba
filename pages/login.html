@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VG Soluciones | Login</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/logRegister.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__container">
+        <img class="navbar__img" src="../assets/img/circuit.svg" alt="Logo VG Soluciones">
+        <h1 class="navbar__title">VG Soluciones</h1>
+      </div>
+      <ul class="navbar__list">
+        <li class="navbar__item"><a href="/" class="navbar__link">Inicio</a></li>
+        <li class="navbar__item"><a href="#acerca" class="navbar__link">Acerca de nosotros</a></li>
+        <li class="navbar__item"><a href="#clientes" class="navbar__link">Clientes</a></li>
+        <li class="navbar__item"><a href="#contacto" class="navbar__link">Contacto</a></li>
+        <li class="navbar__item tooltip">
+          <a href="./pages/login.html" class="navbar__link">Log In</a>
+          <span class="tooltiptext">Inicia sesion</span>
+        </li>
+        <li class="navbar__item tooltip">
+          <a href="./pages/register.html" class="navbar__link">Register</a>
+          <span class="tooltiptext">Registrate</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Iniciar sesion</h2>
+    <form class="form" action="../index.html" method="post">
+      <label class="form__label" for="name">Nombre:</label>
+      <input class="form__input" type="text" name="name" id="name" required autofocus>
+
+      <label class="form__label" for="email">Correo electrónico:</label>
+      <input class="form__input" type="email" name="email" id="email" required>
+
+      <label class="form__label" for="password">Contraseña:</label>
+      <input class="form__input" type="password" name="password" id="password" required>
+
+      <input class="form__submit" type="submit" value="Iniciar sesion">
+      <p class="form__login">No tienes una cuenta? <a href="register.html">Register</a></p>
+    </form>
+  </section>
+  <footer class="footer" id="contacto">
+    <div>
+      <h2 class="footer__title">Contacto</h2>
+      <p class="footer__text">Si deseas más información sobre nuestros servicios o tienes alguna pregunta, no dudes en
+        ponerte en contacto con nosotros.</p>
+      <ul class="footer__list">
+        <li class="footer__item">Teléfono: 123-456-7890</li>
+        <li class="footer__item">Email: info@vgsoluciones.com</li>
+        <li class=" footer__item">Dirección: Calle Ficticia 123, Ciudad Ficticia</li>
+      </ul>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.808324928092!2d-96.85837398468942!3d39.82895057292301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90e75168ee415327!2sVG%20Soluciones!5e0!3m2!1sen!2ses!4v1609365053295!5m2!1sen!2ses"
+      frameborder="0" class="footer__map" allowfullscreen></iframe>
+    <div class="footer__copy">
+      <p>&copy; 2023 VG Soluciones. Todos los derechos reservados.</p>
+      <p class="footer__gle">Made by a <a href="http://github.com/glespinola"> <span>g</span>lespinola</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+/* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* General styles */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  width: .7rem;
+  background-color: #F5F5F5;
+}
+
+/* Track */
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #9c9898;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb:hover {
+  background: #9c9898;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #6697d0 #F5F5F5;
+}
+
+/* Internet Explorer */
+body::-ms-thumb {
+  border-radius: 10px;
+  background-color: #6697d0;
+}
+
+/* Header styles */
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.navbar__title {
+  color: #000;
+  font-size: 2.3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__img {
+  height: 60px;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__link {
+  font-weight: 700;
+  outline: 1px solid #000;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.navbar__list li:nth-child(5) a {
+  padding: 10px;
+  color: #000;
+  background-color: #fff;
+  font-weight: 700;
+  outline: 1px solid #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar__list li:nth-child(5) a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Hero styles */
+/* Main container */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* Card container */
+/* Main container */
+.hero__card {
+  background-image: url(../img/electronic-system-spa-01.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Title */
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero__title span {
+  font-size: 4rem;
+}
+
+/* Text */
+.hero__text {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Main container */
+.info {
+  padding: 4rem;
+  background: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Add a subtle hover effect to the container */
+.info:hover {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.info__title {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* Card container */
+.info__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Add a subtle hover effect to the cards */
+.info__card {
+  width: 30%;
+  background: #f8f8f8;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid #000;
+}
+
+.info__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 60px -20px rgba(0, 0, 0, 0.591);
+}
+
+/* Card title */
+.info__card-title {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Card icon container */
+.info__card-circle {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: #f8f8f8;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card icon */
+.info__card-circle i {
+  font-size: 4rem;
+  color: #333;
+}
+
+/* Card text */
+.info__card-text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #555;
+}
+
+
+/* Clients styles */
+/* Main container */
+.clients {
+  padding: 4rem;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Title */
+.clients__title {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Description container */
+.clients__descriptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* Description */
+.clients__description {
+  width: 30%;
+  text-align: left;
+  height: 70vh;
+}
+
+/* Logo */
+.clients__logo {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Description title */
+.clients__description-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Description text */
+.clients__description-text {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #555;
+}
+
+/* About styles */
+/* Main container */
+.about,
+.about-us {
+  padding: 4rem;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about img,
+.about-us img {
+  height: 18rem;
+}
+
+/* Title */
+.about__title,
+.about-us__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Text */
+.about__text,
+.about-us__text {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #555;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.footer__title {
+  margin-bottom: 1rem;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.footer__text {
+  margin-bottom: 2rem;
+  margin-right: 10rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  margin-bottom: 1rem;
+}
+
+.footer__map {
+  margin: 2rem auto;
+  display: block;
+  width: 80%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+
+
+.footer__copy {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  background-color: #000000;
+  height: 45px;
+  color: #fff;
+}
+
+.footer__gle {
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.footer__gle span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.footer__gle a {
+  color: rgb(0, 255, 255);
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0, 255, 255, 0.6);
+  background: -webkit-linear-gradient(#eee, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -200%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-bottom: 5px solid #fff;
+  border-bottom: 5px solid hsla(0, 0%, 0%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
