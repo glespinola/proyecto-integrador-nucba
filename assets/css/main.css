@@ -23,6 +23,13 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 1200px;
+  gap: 1rem;
 }
 
 a {
@@ -73,6 +80,13 @@ body::-ms-thumb {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+  z-index: 3;
+  background-color: #fff;
 }
 
 .navbar__title {
@@ -84,6 +98,7 @@ body::-ms-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 5rem;
   width: 100%;
 }
 
@@ -139,7 +154,6 @@ body::-ms-thumb {
 /* Hero styles */
 /* Main container */
 .hero {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +171,8 @@ body::-ms-thumb {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   color: #fff;
   position: relative;
@@ -171,7 +185,7 @@ body::-ms-thumb {
   text-transform: uppercase;
   letter-spacing: 2.4px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -186,10 +200,11 @@ body::-ms-thumb {
   font-size: 1.8rem;
   line-height: 2.4rem;
   position: absolute;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
+
 }
 
 .hero__overlay {
@@ -261,7 +276,6 @@ body::-ms-thumb {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
-  background: #f8f8f8;
   margin: 0 auto 2rem;
   display: flex;
   align-items: center;
@@ -313,7 +327,7 @@ body::-ms-thumb {
 .clients__description {
   width: 30%;
   text-align: left;
-  height: 70vh;
+  height: 70%;
 }
 
 /* Logo */
@@ -418,7 +432,7 @@ body::-ms-thumb {
 
 .footer__copy {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -490,4 +504,140 @@ body::-ms-thumb {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+/* .menu-toggle {
+  cursor: pointer;
+}
+
+.menu-toggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  top: -7px;
+  left: -5px;
+  display: none;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+.navbar-toggle-icon {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #000;
+  z-index: 1;
+  cursor: pointer;
+  transform-origin: 4px 0px;
+  border-radius: 10px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+.navbar-toggle-label span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.navbar-toggle-label span:nth-last-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menu-toggle input:checked~.navbar-toggle-label span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menu-toggle input:checked~.navbar-toggle-label span:nth-last-child(1) {
+  transform: rotate(-45deg) translate(-2px, -1px);
+}
+
+.menu-toggle input:checked~.navbar-toggle-label span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+} */
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #000;
+  z-index: 9999999;
+  cursor: pointer;
+  transform-origin: 4px 0px;
+  border-radius: 10px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .toggle {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    width: 90vw;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .tooltiptext {
+    display: none;
+  }
+
+  #nav-toggle:checked+.toggle {
+    display: flex;
+  }
+
+  #nav-toggle:checked+.nav-toggle span {
+    background: #fff;
+  }
+
+  .nav-toggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  .nav-toggle span:nth-last-child(3) {
+    transform-origin: 0% 100%;
+  }
+
+  #nav-toggle:checked~span {}
+
+  /* span:nth-last-child(3) {
+    transform: rotate(-45deg) translate(-2px, -1px);
+  }
+
+  span:nth-last-child(1) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  } */
 }

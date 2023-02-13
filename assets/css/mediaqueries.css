@@ -1,0 +1,60 @@
+@media (max-width: 320px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+    background-color: aliceblue;
+    z-index: 1;
+    padding: 0 5px;
+  }
+
+  .navbar__title {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    margin-top: 65px;
+    max-width: 480px;
+  }
+
+  .hero__card {
+    background-size: fill;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__title span {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 1.3rem;
+    line-height: 1.14rem;
+  }
+
+  .info {
+    width: 100vw;
+  }
+
+  .info__cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+  }
+
+  .info__card {
+    width: 80%;
+  }
+}
