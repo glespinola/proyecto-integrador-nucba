@@ -1,6 +1,10 @@
 /* Reset styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 h1,
@@ -18,18 +22,17 @@ li {
 html {
   width: 100%;
   height: 100%;
+  max-width: 100vw;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background: #f8f8f8;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  max-width: 1200px;
-  gap: 1rem;
+  max-width: 100%;
 }
 
 a {
@@ -87,6 +90,7 @@ body::-ms-thumb {
   bottom: 10px;
   z-index: 3;
   background-color: #fff;
+  width: 100%;
 }
 
 .navbar__title {
@@ -159,6 +163,7 @@ body::-ms-thumb {
   justify-content: center;
   color: #fff;
   text-align: center;
+  max-width: 99vw;
 }
 
 /* Card container */
@@ -224,6 +229,7 @@ body::-ms-thumb {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
   overflow: hidden;
+  max-width: 100vw;
 }
 
 /* Add a subtle hover effect to the container */
@@ -304,6 +310,7 @@ body::-ms-thumb {
   text-align: center;
   display: flex;
   flex-direction: column;
+  max-width: 100vw;
 }
 
 
@@ -386,8 +393,10 @@ body::-ms-thumb {
 }
 
 /* Footer styles */
+
+
 .footer {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   padding: 2rem;
   display: flex;
@@ -395,11 +404,12 @@ body::-ms-thumb {
   flex-direction: row;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .footer__title {
   margin-bottom: 1rem;
-  color: #000;
+  color: #fff;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -419,6 +429,11 @@ body::-ms-thumb {
 
 .footer__item {
   margin-bottom: 1rem;
+}
+
+.footer__item a {
+  color: #fff;
+  font-weight: 500;
 }
 
 .footer__map {
@@ -479,7 +494,7 @@ body::-ms-thumb {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: -200%;
+  bottom: -250%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;
